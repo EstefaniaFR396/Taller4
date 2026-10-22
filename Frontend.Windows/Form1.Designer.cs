@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            txrDisplay = new TextBox();
+            txtDisplay = new TextBox();
             btn7 = new Button();
             btn8 = new Button();
             btnDivide = new Button();
@@ -52,16 +52,17 @@
             btnOpenParenthesis = new Button();
             SuspendLayout();
             // 
-            // txrDisplay
+            // txtDisplay
             // 
-            txrDisplay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txrDisplay.BackColor = Color.FromArgb(128, 255, 128);
-            txrDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            txrDisplay.ForeColor = SystemColors.Window;
-            txrDisplay.Location = new Point(12, 12);
-            txrDisplay.Name = "txrDisplay";
-            txrDisplay.Size = new Size(535, 39);
-            txrDisplay.TabIndex = 0;
+            txtDisplay.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtDisplay.BackColor = Color.FromArgb(128, 255, 128);
+            txtDisplay.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            txtDisplay.ForeColor = SystemColors.MenuText;
+            txtDisplay.Location = new Point(12, 12);
+            txtDisplay.Name = "txtDisplay";
+            txtDisplay.Size = new Size(535, 39);
+            txtDisplay.TabIndex = 0;
+            txtDisplay.TextChanged += txtDisplay_TextChanged;
             // 
             // btn7
             // 
@@ -333,7 +334,7 @@
             Controls.Add(btnDivide);
             Controls.Add(btn8);
             Controls.Add(btn7);
-            Controls.Add(txrDisplay);
+            Controls.Add(txtDisplay);
             Name = "Form1";
             Text = "Functions Evaluator";
             Load += Form1_Load;
@@ -343,7 +344,7 @@
 
         #endregion
 
-        private TextBox txrDisplay;
+        private TextBox txtDisplay;
         private Button btn7;
         private Button btn8;
         private Button btnDivide;
